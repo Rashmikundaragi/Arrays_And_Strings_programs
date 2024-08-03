@@ -1,0 +1,27 @@
+function hasUniqCharecters(str) {
+
+/* lets define empty object which acts as hash table */
+let charSet = {};
+
+/* lets iterate through each char in string */
+
+for(let i=0;i<str.length;i++){
+let char = str[i];
+
+/* Check if the character is already in the Hash Table  return false */
+
+if(charSet[char]){
+return false;
+}
+
+/*  if the character not present in the Hash Table  return true */
+charSet[char]=true;
+}
+
+return true
+
+}
+/* Print the result */
+const input = prompt("Enter the String")
+const result = hasUniqCharecters(input);
+console.log(`Given "${input}" has All unique characters (True or False): ${result}`)
