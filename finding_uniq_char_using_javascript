@@ -25,3 +25,22 @@ return true
 const input = prompt("Enter the String")
 const result = hasUniqCharecters(input);
 console.log(`Given "${input}" has All unique characters (True or False): ${result}`)
+
+
+
+// Using Brute force approach
+function hasUniqueChar(str){
+
+    for (let i = 0; i <= str.length; i++) {
+         for (let j= i+1; j<= str.length; j++){
+               if(str[i]===str[j]){
+                   return false;
+                }
+                return true;
+           }
+    }
+   
+}
+    const input = prompt("Enter the string")
+    const result = hasUniqueChar(input)
+    console.log(`The given ${input} has uniq characters : ${result}`)
